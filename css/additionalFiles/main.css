@@ -1,0 +1,204 @@
+.front-page__img {
+    max-width: 100%;
+}
+
+.history,
+.front-page {
+    padding-bottom: 150px;
+}
+
+.title {
+    font-size: 64px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.history__content {
+    text-align: center;
+}
+
+.history__content img {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.history__paragraph {
+    color: #fff;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+/* players */
+.first-team {
+    padding-bottom: 150px;
+}
+
+.first-team__players {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 120px;
+    grid-template-areas:
+        "st1 st1 st2 st2"
+        "cm1 cm2 cm3 cm4"
+        "cb1 cb2 cb3 cb4"
+        "gk1 gk1 gk1 gk1"
+    ;
+}
+
+.st1 {
+    grid-area: st1;
+}
+
+.st2 {
+    grid-area: st2;
+}
+
+.cm1 {
+    grid-area: cm1;
+}
+
+.cm2 {
+    grid-area: cm2;
+}
+
+.cm3 {
+    grid-area: cm3;
+}
+
+.cm4 {
+    grid-area: cm4;
+}
+
+.cb1 {
+    grid-area: cb1;
+}
+
+.cb2 {
+    grid-area: cb2;
+}
+
+.cb3 {
+    grid-area: cb3;
+}
+
+.cb4 {
+    grid-area: cb4;
+}
+
+.gk1 {
+    grid-area: gk1;
+}
+
+.first-team__player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-team__player img {
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
+.first-team__player p {
+    color: #fff;
+    font-size: 24px;
+}
+
+.first-team__player.st1 {
+    align-items: flex-end;
+}
+
+.first-team__player.st2 {
+    align-items: flex-start;
+}
+
+/* trophy */
+.trophy {
+    padding-bottom: 150px;
+}
+
+.trophy__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        "photo1 photo2"
+        "photo3 photo3"
+        "photo4 photo4";
+    gap: 50px;
+}
+
+.trophy__item {
+    text-align: center;
+}
+
+.trophy__item img {
+    max-width: 100%;
+}
+
+.trophy-one {
+    grid-area: photo1;
+}
+
+.trophy-two {
+    grid-area: photo2;
+}
+
+.trophy-three {
+    grid-area: photo3;
+}
+
+.trophy-four {
+    grid-area: photo4;
+}
+
+/* befor 768px */
+@media screen and (max-width: 768px) {
+
+    /* history */
+    .history__paragraph {
+        font-size: 18px;
+    }
+
+    /* first team */
+    .first-team__players {
+        grid-template-areas:
+            "st1"
+            "st2"
+            "cm1"
+            "cm2"
+            "cm3"
+            "cm4"
+            "cb1"
+            "cb2"
+            "cb3"
+            "cb4"
+            "gk1";
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(11, 1fr);
+    }
+
+    .first-team__player.st1 {
+        grid-area: inherit;
+        align-items: center;
+    }
+
+    .first-team__player.st2 {
+        grid-area: inherit;
+        align-items: center;
+    }
+
+    /* trophy */
+    .trophy__content {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "photo1"
+            "photo2"
+            "photo3"
+            "photo4";
+    }
+}
